@@ -16,6 +16,5 @@ steps:
 trigger: 
   branch:
   - build/*
-  
   event:
   - push
