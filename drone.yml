@@ -1,0 +1,23 @@
+kind: pipeline
+name: "Push on non-master"
+
+concurrency : 
+limit : 2
+
+steps:
+- name: docker  
+  image: plugins/docker
+  settings:
+    username: build
+    password: 1234
+    repo: build/app
+    tags: {DRONE_COMMIT:0:7}
+  commands:
+    - npm install 
+    - go build
+
+trigger: 
+  branch:
+  - build
+  event:
+  - push
