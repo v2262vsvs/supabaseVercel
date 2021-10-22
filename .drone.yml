@@ -9,9 +9,15 @@ steps:
     password: 57afbfc9-8f58-4be9-aba6-9111c32aa944
     repo: 314l0t/image6
     tags: ${DRONE_COMMIT:0:7}
+  environment:
+    Supabase_URL:
+      from_secret: supabase
+    Supabase_Anon_Key:
+      from_secret: key
   trigger: 
   branch:
-    - master
+    exclude:
+      - master
   event:
   - push
 
@@ -27,7 +33,6 @@ steps:
     - npm run build 
   trigger: 
   branch:
-    exclude:
-      - master
+    - master
   event:
   - push
