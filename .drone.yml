@@ -21,13 +21,12 @@ steps:
   event:
   - push
 
-- name: build  
-  image: latest
+  - name: build  
+  image: image6
   settings:
     username: 314l0t
     password: 57afbfc9-8f58-4be9-aba6-9111c32aa944
     repo: 314l0t/drone
-    tags: latest
   commands:
     - npm install 
     - npm run build 
