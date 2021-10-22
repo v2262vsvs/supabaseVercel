@@ -13,11 +13,8 @@ steps:
   branch:
     exclude:
       - master
-  - build/*
-  - build
   event:
   - push
-
 
 - name: build  
   image: latest
