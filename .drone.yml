@@ -10,9 +10,9 @@ steps:
     repo: 314l0t/image6
     tags: ${DRONE_COMMIT:0:7}
   environment:
-    Supabase_URL:
+    SupabaseUrl:
       from_secret: supabase
-    Supabase_Anon_Key:
+    SupabaseAnonKey:
       from_secret: key
   trigger: 
   branch:
