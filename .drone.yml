@@ -8,7 +8,7 @@ steps:
     username: build
     password: 1234
     repo: build/app
-    tags: latest
+    tags: {DRONE_COMMIT:0:7}
 trigger: 
   branch:
   - build/*
@@ -16,7 +16,8 @@ trigger:
   event:
   - push
 
-- name: verifybuild  
+
+- name: build  
   image: latest
   settings:
     username: build
