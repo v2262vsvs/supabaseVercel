@@ -1,13 +1,13 @@
 FROM node:lts as dependencies
 WORKDIR /supa2010
 COPY package.json  ./
-RUN yarn install --frozen-lockfile
+RUN npm install --frozen-lockfile
 
 FROM node:lts as builder
 WORKDIR /supa2010
 COPY . .
 COPY --from=dependencies /supa2010/node_modules ./node_modules
-RUN yarn build
+RUN npm run build
 
 FROM node:lts as runner
 WORKDIR /supa2010
@@ -20,4 +20,4 @@ COPY --from=builder /supa2010/node_modules ./node_modules
 COPY --from=builder /supa2010/package.json ./package.json
 
 EXPOSE 3000
-CMD ["yarn", "start"]
+CMD ["npm", "start"]
