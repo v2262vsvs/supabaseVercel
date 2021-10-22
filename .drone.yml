@@ -7,7 +7,7 @@ steps:
   settings:
     username: build
     password: 1234
-    repo: build/app
+    repo: 314l0t/image6
     tags: {DRONE_COMMIT:0:7}
   trigger: 
   branch:
@@ -21,7 +21,7 @@ steps:
   settings:
     username: build
     password: 1234
-    repo: build/app
+    repo: 314l0t/image6
     tags: latest
   commands:
     - npm install 
