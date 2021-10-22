@@ -21,7 +21,7 @@ steps:
   event:
   - push
 
-- name: build  
+- name: buildVerif  
   image: 314l0t/image6
   settings:
     username: 314l0t
