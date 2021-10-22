@@ -1,7 +1,7 @@
 FROM node:lts as dependencies
 WORKDIR /supa2010
-COPY package.json  ./
-RUN yarn install --frozen-lockfile --frozen-package-lock.json --unsafe-perm
+COPY package.json package-lock.json ./
+RUN yarn install --frozen-lockfile --frozen-package-lock.json --unsafe-perm --production
 
 FROM node:lts as builder
 WORKDIR /supa2010
