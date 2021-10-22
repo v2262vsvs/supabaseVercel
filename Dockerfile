@@ -7,7 +7,7 @@ FROM node:lts as builder
 WORKDIR /supa2010
 COPY . .
 COPY --from=dependencies /supa2010/node_modules ./node_modules
-RUN npm rub build
+RUN npm run build
 
 FROM node:lts as runner
 WORKDIR /supa2010
