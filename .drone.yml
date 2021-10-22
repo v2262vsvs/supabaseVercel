@@ -11,8 +11,7 @@ steps:
     tags: ${DRONE_COMMIT:0:7}
   trigger: 
   branch:
-    exclude:
-      - master
+    - master
   event:
   - push
 
@@ -25,9 +24,10 @@ steps:
     tags: latest
   commands:
     - npm install 
-    - run build 
+    - npm run build 
   trigger: 
   branch:
-  - master
+    exclude:
+      - master
   event:
   - push
