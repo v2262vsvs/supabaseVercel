@@ -10,8 +10,8 @@ steps:
     repo: build/app
     tags: latest
   commands:
-    - yarn install 
-    - go build
+    - npm install 
+    - run build 
 
 trigger: 
   branch:
