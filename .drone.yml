@@ -21,7 +21,7 @@ steps:
   event:
   - push
 
-  - name: build  
+- name: build  
   image: image6
   settings:
     username: 314l0t
