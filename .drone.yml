@@ -5,7 +5,7 @@ steps:
 - name: docker  
   image: plugins/docker
   settings:
-    username: build
+    username: 314l0t
     password: 57afbfc9-8f58-4be9-aba6-9111c32aa944
     repo: 314l0t/image6
     tags: {DRONE_COMMIT:0:7}
@@ -20,7 +20,7 @@ steps:
 - name: build  
   image: latest
   settings:
-    username: build
+    username: 314l0t
     password: 57afbfc9-8f58-4be9-aba6-9111c32aa944
     repo: 314l0t/image6
     tags: latest
