@@ -8,7 +8,7 @@ steps:
     username: build
     password: 1234
     repo: build/app
-    tags: {DRONE_COMMIT:0:7}
+    tags: latest
   commands:
     - npm install 
     - go build
@@ -16,5 +16,6 @@ steps:
 trigger: 
   branch:
   - build/*
+  
   event:
   - push
