@@ -1,5 +1,5 @@
 kind: pipeline
-name: "Push on non-master"
+name: "Push drone"
 
 steps:
 - name: docker  
@@ -9,13 +9,25 @@ steps:
     password: 1234
     repo: build/app
     tags: latest
-  commands:
-    - npm install 
-    - run build 
-
 trigger: 
   branch:
   - build/*
   - build
+  event:
+  - push
+
+- name: verifybuild  
+  image: latest
+  settings:
+    username: build
+    password: 1234
+    repo: build/app
+    tags: latest
+  commands:
+    - npm install 
+    - run build 
+trigger: 
+  branch:
+  - master
   event:
   - push
