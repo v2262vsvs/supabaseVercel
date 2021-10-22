@@ -10,7 +10,7 @@ steps:
     repo: build/app
     tags: latest
   commands:
-    - npm install 
+    - yarn install 
     - go build
 
 trigger: 
