@@ -7,7 +7,7 @@ steps:
   settings:
     username: 314l0t
     password: 57afbfc9-8f58-4be9-aba6-9111c32aa944
-    repo: 314l0t/image6
+    repo: 314l0t/drone
     tags: ${DRONE_COMMIT:0:7}
   environment:
     SupabaseUrl:
@@ -26,7 +26,7 @@ steps:
   settings:
     username: 314l0t
     password: 57afbfc9-8f58-4be9-aba6-9111c32aa944
-    repo: 314l0t/image6
+    repo: 314l0t/drone
     tags: latest
   commands:
     - npm install 
